@@ -1,0 +1,27 @@
+/* Exercise 2 External CSS */
+
+/* TODO: Universal selector to set global font to Arial, sans-serif */
+/* * { font-family: Arial, sans-serif; } */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* TODO: Type selector to color all h1 elements red */
+/* h1 { color: red; } */
+
+h1 {
+    color: red;
+}
+
+/* TODO: Class selector .highlight with yellow background */
+/* .highlight { background: yellow; } */
+
+.highlight {
+    background: yellow;
+}
+
+/* TODO: ID selector #special with font-size 24px */
+/* #special { font-size: 24px; } */
+#special {
+    font-size: 24px;
+}

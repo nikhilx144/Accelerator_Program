@@ -1,0 +1,93 @@
+<!-- HTML Forms Practice Exercise -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms Prac</title>
+  </head>
+  <body>
+    <form action="/submit" method="post">
+      <fieldset>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          name="username"
+          id="name"
+          value="root"
+          placeholder="Name"
+        />
+        <br /><br />
+        <label for="age">Age</label>
+        <input
+          type="number"
+          name="age"
+          id="age"
+          value="18"
+          min="1"
+          max="100"
+          placeholder="Age"
+        />
+        <br /><br />
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Email" />
+        <br /><br />
+        <label for="DOB">Date of Birth</label>
+        <input type="date" id="DOB" name="dob" placeholder="DOB" />
+        <br /><br />
+        <label for="gender">Gender</label>
+        <br />
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male" />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female" />
+        <label for="other">Other</label>
+        <input type="radio" name="gender" id="other" value="other" />
+        <br /><br />
+        <label>
+          Select your country
+          <select name="country">
+            <option value="">Choose</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="australia">Australia</option>
+            <option value="uae">UAE</option>
+            <option value="canada">Canada</option>
+            <option value="nota">NOTA</option>
+          </select>
+        </label>
+        <br /><br />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          value="password123"
+        />
+        <br /><br />
+        <label for="branch">Branch</label>
+        <br />
+        <label for="cse">CSE</label>
+        <input type="radio" name="branch" id="cse" value="CSE" />
+        <label for="csm">CSM</label>
+        <input type="radio" name="branch" id="csm" value="CSM" />
+        <label for="it">IT</label>
+        <input type="radio" name="branch" id="it" value="IT" />
+        <br /><br />
+        <label>Skills</label>
+        <br />
+        <label for="python">Python</label>
+        <input type="checkbox" id="python" name="skills" value="python" />
+        <label for="c">C</label>
+        <input type="checkbox" id="c" name="skills" value="c" />
+        <label for="c++">C++</label>
+        <input type="checkbox" id="c++" name="skills" value="c++" />
+        <label for="java">Java</label>
+        <input type="checkbox" id="java" name="skills" value="java" />
+        <br /><br />
+        <input type="submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>

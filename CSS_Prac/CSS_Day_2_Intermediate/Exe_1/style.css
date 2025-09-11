@@ -1,0 +1,28 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+    padding: 20px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: blue;
+    margin: 30px;
+    background: lightyellow;
+    max-width: 360px;
+    padding: 40px 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(50, 48, 48);
+}
+
+strong {
+    color: rgb(58, 49, 49);
+}
+
+span {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    background-color: lightgray;
+    padding: 0px 5px;
+}
