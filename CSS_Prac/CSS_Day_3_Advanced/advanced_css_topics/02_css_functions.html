@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>CSS Functions</title>
+  <style>
+    body { margin: 0; font: 16px/1.6 system-ui; }
+    header { padding: 16px; background: #111827; color: #e5e7eb; }
+    h1 { font-size: clamp(18px, 4vw, 36px); margin: 0; }
+    main { display: grid; gap: 16px; padding: 16px; }
+    .card {
+      width: calc(100% - 32px);
+      max-width: min(720px, 90vw);
+      margin: 0 auto; padding: 16px; border: 1px solid #e5e7eb; border-radius: 12px;
+    }
+    .sidebar {
+      position: sticky; top: 12px;
+      width: max(240px, 20vw);
+      border: 1px dashed #94a3b8; padding: 12px; border-radius: 8px;
+    }
+    @media (min-width: 900px){
+      main { grid-template-columns: 1fr 2fr; align-items: start; }
+    }
+  </style>
+</head>
+<body>
+  <header><h1>CSS Math Functions in Action</h1></header>
+  <main>
+    <aside class="sidebar">Sticky sidebar with <code>max()</code></aside>
+    <section class="card">
+      <p>Title scales via <code>clamp()</code>, card width via <code>calc()</code>, and layout limits via <code>min()</code>/<code>max()</code>.</p>
+    </section>
+  </main>
+</body>
+</html>

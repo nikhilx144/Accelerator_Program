@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exercise 1 – Responsive Analytics Dashboard</title>
+  <style>
+    /* =========================
+       STUDENT TODO (CSS ONLY)
+       =========================
+       1) Define CSS variables in :root for colors, spacing, radius, z-index.
+       2) Implement Grid page template: header, sidebar, content (grid-template-areas).
+       3) Sidebar fixed width on ≥1024px; collapsible behavior at smaller widths.
+       4) Content cards: Flexbox for internal layout; use gap (no inner margins).
+       5) Responsive card grid: auto-fit, minmax(220px, 1fr), 1rem gap.
+       6) clamp() for h1/h2 sizes; rem for spacing; %/vw/vh appropriately.
+       7) Sticky sub-header in content; layered above cards with z-index token.
+       8) Focus-visible styles; prefers-reduced-motion to disable transitions.
+       9) Theme override scope (.theme-dark) tweaking surface/text tokens.
+      10) Ensure no horizontal scroll at 360px; test breakpoints at 768px/1024px.
+    */
+
+  * {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  :root {
+    --radius: 20px;
+    --spacing: 16px;
+    --z-index-top: 10;
+    --color-bg: rgba(17, 23, 37, 1);
+    --color-text: rgba(255, 255, 255, 1);
+    font-family: Arial, Helvetica, sans-serif;
+    --color-sidebar: rgba(24, 30, 45, 1);
+    --main-content-font: 16px;
+  }    
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  .app__header {
+    max-width: 100%;
+    margin: 20px 10px;
+  }
+
+  .app__sidebar {
+    display: inline-block;
+    position: relative;
+    width: 18%;
+  }
+  
+  .nav__item {
+    display: block;
+    background-color: var(--color-sidebar);
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 20px 10px;
+    border: none rgba(255, 255, 255, 0.1);
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  .app__content {
+    display: inline-block;
+    width: 65%;
+    font-size: var(--main-content-font);
+  }
+
+  .card {
+    display: inline-block;
+    width: 20%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
+    padding: 20px var(--spacing);
+    margin: 20px 0px;
+    line-height: 30px;
+  }
+
+  .subheader__title {
+    display: inline-block;
+    width: 75%;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .filters {
+    display: inline-block;
+    width: 20%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .card__meta {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+  }
+
+  .card__body {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    margin: 10px 0px;
+    border: solid 1px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+
+  .btn {
+    padding: 10px;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    border: solid 1px rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+  }
+
+  </style>
+</head>
+<body class="theme-default">
+  <div class="app">
+    <header class="app__header" role="banner">
+      <h1 class="brand">Acme Analytics</h1>
+    </header>
+
+    <aside class="app__sidebar" role="navigation" aria-label="Primary">
+      <nav class="nav">
+        <a href="#" class="nav__item">Overview</a>
+        <a href="#" class="nav__item">Reports</a>
+        <a href="#" class="nav__item">Teams</a>
+        <a href="#" class="nav__item">Settings</a>
+      </nav>
+    </aside>
+
+    <main class="app__content" role="main">
+      <div class="subheader" role="region" aria-label="Subheader">
+        <h2 class="subheader__title">KPI Overview</h2>
+        <div class="filters">
+          <button class="btn">Today</button>
+          <button class="btn">7d</button>
+          <button class="btn">30d</button>
+        </div>
+      </div>
+
+      <section class="cards">
+        <article class="card">
+          <h3 class="card__title">Revenue</h3>
+          <div class="card__meta">vs last week</div>
+          <div class="card__body">[chart placeholder]</div>
+          <div class="card__actions">
+            <button class="btn">Details</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3 class="card__title">Active Users</h3>
+          <div class="card__meta">last 24h</div>
+          <div class="card__body">[chart placeholder]</div>
+          <div class="card__actions">
+            <button class="btn">Details</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3 class="card__title">Conversion</h3>
+          <div class="card__meta">month to date</div>
+          <div class="card__body">[chart placeholder]</div>
+          <div class="card__actions">
+            <button class="btn">Details</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3 class="card__title">NPS</h3>
+          <div class="card__meta">quarter</div>
+          <div class="card__body">[chart placeholder]</div>
+          <div class="card__actions">
+            <button class="btn">Details</button>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

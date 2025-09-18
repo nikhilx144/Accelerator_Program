@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+:root {
+    --navbar-color: rgba(34, 40, 49, 0.5);
+    --card-color: rgba(221, 230, 237, 1);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar {
+    /* border: 2px solid red; */
+    background-color: var(--navbar-color);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.nav-links {
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.dishes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.dish-card {
+    background-color: var(--card-color);
+    padding: 20px 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 30px; */
+    width: 450px;
+    gap: 15px;
+}
+
+.dish-img {
+    display: flex;
+    height: 250px;
+    width: 300px;
+}
+
+.hero {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* margin-top: 40px; */
+    height: 44em;
+    z-index: 1;
+    background-image: url('assets/restaurant_img.jpg');
+    background-size: cover;
+}
+
+.restaurant-name {
+    /* border: 2px solid black; */
+    z-index: 2;
+    color: white;
+    margin-left: 50px;
+    font-size: 195px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgba(32, 34, 36, 0.556);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin: 20px;
+}
+
+.location-info {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 20px 20px 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    gap: 1em;
+}
+
+.restaurant-hrs {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 20px 20px;
+    gap: 6px;
+    margin-top: 20px;
+}
+
+.btn--primary {
+    padding: 20px;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(56, 139, 221);
+    color: white;
+    width: 300px;
+}
+
+.reserve-table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 50px 0;
+}
+
+.btn--primary:hover {
+    background-color: rgba(14, 99, 185, 0.9);
+}
+
+@media all and (max-width: 700px){
+    .dishes {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+}
+
+@media print {
+    img {
+        display: none !important;
+    }
+}
+
+.btn--primary:active {
+    background-color: rgb(111, 41, 182);
+}

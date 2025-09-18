@@ -1,0 +1,31 @@
+HTML + CSS Assessment (v2) — Exactly 4 TODOs per Exercise
+=================================================================
+
+Each exercise contains exactly FOUR TODOs:
+- 2 HTML tasks  => [H1], [H2]
+- 2 CSS tasks   => [C1], [C2]
+
+Exercises
+---------
+1) exercise1_profile_card_student.html
+   - HTML: [H1] Add a Department list item. [H2] Replace the bio paragraph with a 2–3 line (40–70 words) bio.
+   - CSS:  [C1] Center the card using Flexbox on <body>. [C2] Style the .card (padding, radius, shadow, max-width).
+
+   Assets provided: profile.png (use is already wired in <img> src).
+
+2) exercise2_course_registration_student.html
+   - HTML: [H1] Add a required Phone field (type='tel', pattern='\d{10}'). [H2] Add a required Terms & Conditions checkbox.
+   - CSS:  [C1] Make .form-grid responsive (two columns on >=720px, single column on small screens).
+            Tip: Use CSS Grid with grid-template-columns and a media query.
+            [C2] Style .btn.submit (green) and .btn.reset (red) including :hover and :focus ring.
+
+Scoring (suggested)
+-------------------
+- Structure & Semantics (30%)
+- CSS Fundamentals (30%)
+- Layout/Responsiveness (25%)
+- Accessibility & Polish (15%)
+
+Submission
+----------
+Students should turn in the two edited HTML files only.

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exercise 2 – Media Showcase</title>
+  <style>
+    /* =========================
+       STUDENT TODO (CSS ONLY)
+       =========================
+       1) Hero: gradient background + mask vignette; clamp() for heading text.
+       2) Sticky top nav (position: sticky) with proper z-index.
+       3) Responsive images:
+          - <picture> in hero (art direction).
+          - Gallery images: object-fit: cover; use aspect-ratio to avoid CLS.
+          - srcset + sizes for various widths.
+       4) Gallery grid: auto-fit/minmax tiles with consistent gaps.
+       5) Add grayscale filter on tiles; remove on hover/focus with transitions.
+       6) Overlay label via ::after; absolute-positioned within tile.
+       7) Clip-path polygon on one featured tile.
+       8) CSS variables for accent colors and spacing tokens.
+       9) Accessibility: focus-visible outlines; contrast ≥ 4.5:1 for text.
+      10) Motion prefs: @media (prefers-reduced-motion: reduce) to disable transitions.
+    */
+  </style>
+</head>
+<body>
+  <header class="topnav" role="navigation" aria-label="Top Navigation">
+    <a href="#" class="logo">MediaLab</a>
+    <nav class="topnav__links">
+      <a href="#">Home</a>
+      <a href="#">Gallery</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <section class="hero" role="region" aria-label="Hero">
+    <div class="hero__media">
+      <picture>
+        <source type="image/avif" srcset="https://picsum.photos/seed/hero/1600/900.avif" media="(min-width: 1024px)">
+        <source type="image/webp" srcset="https://picsum.photos/seed/hero/1200/675.webp"  media="(min-width: 768px)">
+        <img class="hero__img" src="https://picsum.photos/seed/hero/800/600.jpg" alt="Dramatic landscape at sunset">
+      </picture>
+    </div>
+    <div class="hero__text">
+      <h1>Experience Visual Stories</h1>
+      <p>High‑impact imagery, adaptive loading, and accessible motion.</p>
+    </div>
+  </section>
+
+  <main class="gallery" role="main">
+    <figure class="tile">
+      <img src="https://picsum.photos/id/1016/800/600" alt="River valley" class="tile__img">
+      <figcaption class="tile__caption">Valley</figcaption>
+    </figure>
+    <figure class="tile tile--featured">
+      <img src="https://picsum.photos/id/1035/800/600" alt="Forest canopy" class="tile__img">
+      <figcaption class="tile__caption">Canopy</figcaption>
+    </figure>
+    <figure class="tile">
+      <img src="https://picsum.photos/id/1025/800/600" alt="Country road" class="tile__img">
+      <figcaption class="tile__caption">Road</figcaption>
+    </figure>
+    <figure class="tile">
+      <img src="https://picsum.photos/id/1043/800/600" alt="Coastline" class="tile__img">
+      <figcaption class="tile__caption">Coast</figcaption>
+    </figure>
+    <figure class="tile">
+      <img src="https://picsum.photos/id/1039/800/600" alt="Mountain lake" class="tile__img">
+      <figcaption class="tile__caption">Lake</figcaption>
+    </figure>
+  </main>
+</body>
+</html>

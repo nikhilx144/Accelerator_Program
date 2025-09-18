@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Z-index & Stacking</title>
+  <style>
+    body { margin: 40px; font: 16px/1.4 system-ui; }
+    .stage { position: relative; height: 240px; border: 1px dashed #94a3b8; }
+    .layer { position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font-size: 20px; }
+    .a { background: #ef4444; z-index: 1; transform: translate(20px,20px); }
+    .b { background: #3b82f6; z-index: 2; transform: translate(40px,40px); }
+    .c { background: #10b981; z-index: 3; transform: translate(60px,60px); }
+    .context { position: relative; transform: translateZ(0); }
+    .context .inner { position: absolute; top: -20px; left: -20px; background: #f59e0b; padding: 6px 10px; z-index: 9999; }
+  </style>
+</head>
+<body>
+  <h2>Layers with z-index</h2>
+  <div class="stage">
+    <div class="layer a">z=1</div>
+    <div class="layer b">z=2</div>
+    <div class="layer c context">
+      <span>z=3 (new stacking context)</span>
+      <div class="inner">High z in local context</div>
+    </div>
+  </div>
+  <p>The orange badge has a huge z-index, but it cannot escape its own stacking context (green box).</p>
+</body>
+</html>

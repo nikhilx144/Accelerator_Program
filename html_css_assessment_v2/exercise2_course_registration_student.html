@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 2 — Course Registration Form (Student Version)</title>
+  <style>
+    :root {
+      --gap: 12px;
+    }
+
+    /* TODO[C1]: Turn .form-grid into a responsive two-column layout on wide screens
+       and a single column on small screens (use CSS Grid or Flexbox).
+       Tip: grid-template-columns: repeat(2, 1fr) for >= 720px and 1fr for small.*/
+    .form-grid {
+      /* TODO[C1] */
+      display: grid;
+      gap: var(--gap);
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      margin-bottom: 1rem;
+    }
+    
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f7fafc;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    .container {
+      width: min(92vw, 760px);
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(18, 38, 63, 0.08);
+      padding: 1.25rem 1.25rem 1.5rem;
+    }
+
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: 1.6rem;
+      color: #1f2937;
+    }
+    .helper {
+      margin: 0 0 1rem;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    label {
+      font-weight: 600;
+      color: #374151;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+      border-color: #60a5fa;
+    }
+
+    .options {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 6px 0;
+    }
+    .options label {
+      font-weight: 500;
+    }
+
+    .row {
+      display: contents; /* lets label and control align within the grid */
+      align-items: center;
+      gap: var(--gap);
+      margin-bottom: 0.5rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* TODO[C2]: Style buttons:
+       - .btn.submit => green background with white text
+       - .btn.reset  => red background with white text
+       Add :hover and :focus styles for both (slightly darker bg + visible focus ring).
+    */
+    .btn {
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .btn.submit {
+      /* TODO[C2] */
+      background-color: green;
+      color: white;
+    }
+    .btn.reset {
+      /* TODO[C2] */
+      background-color: red;
+      color: white;
+    }
+    .btn:hover {
+      /* TODO[C2] */
+      filter: brightness(0.9);
+    }
+    .btn:focus {
+      outline: none;
+      /* TODO[C2] */
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="Course registration form">
+    <h1>Course Registration</h1>
+    <p class="helper">Fields marked * are required.</p>
+
+    <form action="#" method="post" novalidate>
+      <div class="form-grid" aria-live="polite">
+        <div class="row">
+          <label for="name">Student Name *</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="row">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" required>
+        </div>
+
+        <div class="row">
+          <label>Gender *</label>
+          <div class="options" role="group" aria-label="Gender options">
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="course">Course Selection *</label>
+          <select id="course" name="course" required>
+            <option value="">-- Select a course --</option>
+            <option value="html">HTML Foundations</option>
+            <option value="css">CSS Deep Dive</option>
+            <option value="js">JavaScript Essentials</option>
+            <option value="react">React Basics</option>
+          </select>
+        </div>
+
+        <!-- TODO[H1]: Add a new Phone field (type="tel") with label "Phone *" and an input that
+             accepts 10 digits using pattern="\d{10}" and required.
+             Place it as a new .row like others. -->
+        <!-- TODO[H1] -->
+
+        <div class="row">
+          <label for="phno">Phone *</label>
+          <input type="tel" id="phno" name="phno" pattern="\d{10}" placeholder="10-digit number" required>
+        </div>
+
+        <div class="row">
+          <label>Skills</label>
+          <div class="options" role="group" aria-label="Skill selection">
+            <label><input type="checkbox" name="skills" value="html"> HTML</label>
+            <label><input type="checkbox" name="skills" value="css"> CSS</label>
+            <label><input type="checkbox" name="skills" value="javascript"> JavaScript</label>
+            <label><input type="checkbox" name="skills" value="python"> Python</label>
+          </div>
+        </div>
+
+        <!-- TODO[H2]: Add a required "I agree to the Terms & Conditions *" checkbox with a proper <label>.
+             Place it as a new .row and ensure the input has id="terms" and required attribute. -->
+        <!-- TODO[H2] -->
+        
+        <div class="row">
+          <label>Terms & Conditions *</label>
+          <label><input type="checkbox" name="t&c" value="agree" id="terms" required> I agree to the Terms & Conditions</label>
+        </div>
+
+        <div class="row">
+          <label for="comments">Comments</label>
+          <textarea id="comments" name="comments" rows="4" placeholder="Any additional information..."></textarea>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn submit">Submit</button>
+        <button type="reset" class="btn reset">Reset</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

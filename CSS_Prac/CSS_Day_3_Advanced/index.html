@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Positioning Example</title>
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="fixed-top">
+    I'm fixed at the top of the screen and stay there when you scroll.
+  </div>
+
+  <div class="container">
+    <div class="static-default">
+      I'm static (default), I follow the normal flow of the document.
+    </div>
+
+    <div class="abs-parent">
+      <div class="abs-child">
+        I'm absolute, positioned relative to my parent (the .abs-parent).
+      </div>
+    </div>
+
+    <div class="rel">
+      I'm relative, slightly moved down and to the right from my normal position.
+    </div>
+
+    <div class="sticky-box">
+      I will stick to the top of my container once you scroll past me.
+    </div>
+
+    <!-- This section adds more content so you can scroll -->
+    <div class="more-content">
+      <p>Keep scrolling to see how different types of positioning work!</p>
+      <p>The fixed element stays at the top of the screen.</p>
+      <p>The sticky element will stick to the top when it reaches the top of the viewport.</p>
+      <p>The absolute element is positioned inside its parent container.</p>
+      <p>The relative element moves from its default position but still occupies space in the flow.</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Clip-Path & Shapes</title>
+  <style>
+    body { margin: 24px; font: 16px/1.6 system-ui; }
+    .avatar {
+      width: 200px; height: 200px; background: url('https://picsum.photos/id/1005/600/600') center/cover no-repeat;
+      clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+      margin-bottom: 16px;
+    }
+    .wrap {
+      max-width: 600px; display: flow-root;
+      shape-outside: circle(40%); float: left; width: 240px; height: 240px;
+      background: url('https://picsum.photos/id/1011/600/600') center/cover no-repeat; border-radius: 50%;
+      margin: 0 16px 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="avatar" title="Clipped polygon avatar"></div>
+  <div class="wrap"></div>
+  <p>
+    Text wraps around the circular image using <code>shape-outside</code>. Combine with
+    <code>clip-path</code> for creative components like angled cards, tickets, and badges.
+    Try changing the polygon points to see different silhouettes.
+  </p>
+</body>
+</html>

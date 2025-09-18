@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>CSS Units Demo</title>
+  <style>
+    html { font-size: 16px; }
+    body { margin: 0; font-family: system-ui; }
+    header { padding: 2rem; background:#111827; color:#e5e7eb; }
+    h1 { font-size: 2rem; margin: 0; }
+    main { display: grid; gap: 1rem; grid-template-columns: 1fr; padding: 1rem; }
+    .panel {
+      background:#f8fafc;
+      padding: 1.5rem;
+      border: 1px solid #e5e7eb; border-radius: .75rem;
+    }
+    .em-example { font-size: 1rem; }
+    .em-example .inner { font-size: 1.2em; }
+    .hero { height: 40vh; background: linear-gradient(135deg,#60a5fa,#34d399); border-radius: .75rem; }
+    .fluid { width: 80%; margin-inline: auto; }
+    @media (min-width: 900px){ main { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+  <header><h1>Units: rem, em, %, vh</h1></header>
+  <main>
+    <section class="panel em-example">
+      <p>Base text is 1rem. <span class="inner">This span is 1.2em (relative to its parent).</span></p>
+    </section>
+    <section class="panel hero"></section>
+    <section class="panel fluid">
+      <p>This panel is 80% of its container’s width.</p>
+    </section>
+  </main>
+</body>
+</html>

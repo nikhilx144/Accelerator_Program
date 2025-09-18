@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>CSS Best Practices</title>
+  <style>
+    .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; background:#fff; max-width: 640px; margin: 24px auto; }
+    .card__title { margin: 0 0 8px; font: 600 1.25rem/1.2 system-ui; }
+    .card__meta { color: #6b7280; margin-bottom: 12px; }
+    .button { display: inline-block; padding: 8px 12px; border-radius: 8px; border: 1px solid #111827; text-decoration: none; }
+    .button--primary { background: #111827; color: #fff; }
+    .u-visually-hidden { position:absolute; width:1px; height:1px; margin:-1px; border:0; padding:0; clip:rect(0 0 0 0); overflow:hidden; }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <article class="card">
+    <h2 class="card__title">Scalable Styles</h2>
+    <p class="card__meta">BEM classes, utilities, and motion preferences.</p>
+    <a class="button button--primary" href="#">Primary Action</a>
+    <span class="u-visually-hidden">Extra context for screen readers</span>
+  </article>
+</body>
+</html>
