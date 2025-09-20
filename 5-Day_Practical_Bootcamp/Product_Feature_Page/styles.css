@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+dt {
+    font-weight: bold;
+}
+
+header, footer {
+    background-color: rgb(42, 39, 39);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+footer {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+section {
+    border-radius: 15px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    margin: 20px;
+    padding: 20px;
+    /* line-height: 30px; */
+}
+
+.product-specs h2 {
+    /* border: 2px solid black; */
+    margin-bottom: 15px;
+}
+
+.product-specs dd {
+    margin-bottom: 20px;
+}
+
+.product-comparison h2 {
+    margin-bottom: 5px;
+}
+
+.product-comparison h3 {
+    margin-bottom: 10px;
+}
+
+.product-comparison table {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.product-comparison td, th {
+    padding: 10px;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(219, 219, 219);
+}
+
+td:nth-child(2), th:nth-child(2) {
+    background-color: rgb(233, 227, 227);
+}
+
+tr:hover {
+    background-color: lightgray;
+}
+
+.phone-img {
+    border-radius: 15px;
+}
+
+@media all and (max-width: 481px) {
+    .product-comparison table {
+        display: block;
+        overflow-x: auto;
+    }
+}
