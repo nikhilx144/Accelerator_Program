@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+header {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(43, 156, 43);
+    color: white;
+    height: 5em;
+    font-size: 1.5rem;
+}
+
+.impact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.impact h2 {
+    font-weight: bolder;
+    margin: 30px 0 10px 0;
+}
+
+.impact ul {
+    list-style: none;
+    text-align: center;
+}
+
+.impact li {
+    margin: 10px;
+    font-weight: lighter;
+}
+
+.impact span {
+    color: orange;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.donate-tiers {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.donate-tier-card {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 30px;
+    padding: 20px;
+    height: 250px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    background-color: rgb(243, 243, 243);
+    overflow: hidden;
+}
+
+.donate-tier-card button {
+        background-color: rgb(43, 156, 43);
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        color: white;
+        border-radius: 10px;
+}
+
+.donate-tier-card button:hover {
+    background-color: rgb(34, 119, 34);
+    transition: 0.3s ease;
+}
+
+@media all and (max-width: 845px) {
+    .donate-tier-card {
+        margin: 10px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .donate-tiers {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media all and (max-width: 722px) {
+    header {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+}
