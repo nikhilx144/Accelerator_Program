@@ -1,0 +1,20 @@
+Task 1:-
+1) us-east-1
+2) us-east-2
+
+Task 2:-
+3 AZs in ap-south-2 (Hyderabad)
+
+Task 3:-
+1) ap-south-1 (Mumbai)
+2) ap-south-2 (Hyderabad)
+3) ap-southeast-1 (Singapore)
+4) ap-southeast-2 (Sydney)
+5) ap-northeast-1 (Tokyo)
+
+Task 4:-
+Hyderabad Edge Location
+Edge locations enables the data to be sent to the user to reach quickly with low latency due to less travel distance.
+
+Task 5:-
+Flipkart should choose ap-south-1 (Mumbai) and ap-south-2 (Hyderabad). This enables them to make their apps accessible to Indian users with low latency and quick deployment. If they choose U.S regions, it will result in high latency and delay which is not favorable.

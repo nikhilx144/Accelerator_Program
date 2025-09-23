@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    background-color: #91ADC8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-form {
+    border-radius: 0.8em;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2em;
+    gap: 1em;
+    padding: 2em;
+    background-color: #647FBC;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.3);
+    width: auto;
+    max-width: 30em;
+}
+
+.registration-form input, select {
+    border-radius: 8px;
+    height: 3em;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.registration-form label {
+    font-weight: bolder;
+}
+
+#submit-button {
+    cursor: pointer;
+    background-color: #31326F;
+    color: white;
+    border: none;
+    margin-right: auto;
+    width: 8em;
+    margin-top: 1em;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset legend {
+    font-size: 0.8em;
+}
+
+fieldset select {
+    margin-top: 1em;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin-top: 1em;
+}
+
+form small {
+    margin-top: 0.3em;
+    color: rgb(187, 187, 187);
+}
+
+form input:invalid {
+    border: 1px solid red;
+}

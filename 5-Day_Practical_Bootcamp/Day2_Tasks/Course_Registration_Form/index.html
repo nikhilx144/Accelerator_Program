@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="hero">
+        <section class="registration-form-section">
+            <form action="" class="registration-form">
+                <h2>Course Registration</h2>
+                <div class="full-name">
+                    <label for="full-name">Full Name: </label>
+                    <input type="text" name="full-name" id="full-name" aria-describedby="help-name" required>
+                    <small id="help-name">Please enter your full name.</small>
+                </div>
+                <div class="email">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" aria-describedby="help-email" required>
+                    <small id="help-email">Please enter your email.</small>
+                </div>
+                <div class="phno">
+                    <label for="phno">Phone Number: </label>
+                    <input type="tel" name="phno" id="phno" aria-describedby="help-phno" pattern="\d{10}" required>
+                    <small id="help-phno">Please enter your 10 digit phone number.</small>
+                </div>
+                <div class="course-selection">
+                    <fieldset>
+                        <legend>Choose a course you want to register for</legend>
+                        <label for="course">Course Selection: </label>
+                        <select name="course" id="course" aria-describedby="help-course-selection" required>
+                            <option value="">Please select a course</option>
+                            <option value="web-dev">Web Development</option>
+                            <option value="dev-ops">DevOps</option>
+                            <option value="data-science">Data Science</option>
+                            <option value="ai">Artificial Intelligence</option>
+                        </select>
+                        <small id="help-course-selection"></small>
+                    </fieldset>
+                </div>
+                <input type="submit" id="submit-button">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
