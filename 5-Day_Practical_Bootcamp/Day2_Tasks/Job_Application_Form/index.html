@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Job Application Form</title>
+</head>
+<body>
+    <main class="hero">
+        <section class="personal-info">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <form action="">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email">
+                    <label for="phno">Phone: </label>
+                    <input type="tel" name="phno" id="phno">
+                </form>
+            </fieldset>
+        </section>
+
+        <section class="job-details">
+            <fieldset>
+                <legend>Job Details</legend>
+                <form action="">
+                    <label for="">Position Applying for: </label>
+                    <label for="developer">Developer </label>
+                    <input type="radio" id="developer" name="position">
+                    <label for="designer">Designer </label>
+                    <input type="radio" id="designer" name="position">
+                    <label for="manager">Manager </label>
+                    <input type="radio" id="manager" name="position">
+                    <label for="">Skills: </label>
+                    <label for="html">HTML </label>
+                    <input type="radio" id="html">
+                    <label for="css">CSS </label>
+                    <input type="radio" id="css">
+                    <label for="js">Javascript </label>
+                    <input type="radio" id="js">
+                    <label for="react">React </label>
+                    <input type="radio" id="react">
+                </form>
+            </fieldset>
+        </section>
+
+        <section class="resume">
+            <fieldset>
+                <legend>Resume</legend>
+                <form action="">
+                    <label for="resume-upload">Upload your resume (PDF or DOCX only):</label>
+                    <input type="file" id="resume-upload" accept=".pdf, .docx">
+                </form>
+            </fieldset>
+        </section>
+
+        <button class="submit">Submit</button>
+    </main>
+</body>
+</html>

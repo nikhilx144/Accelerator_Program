@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5em;
+    gap: 0.6em;
+}
+
+section {
+    margin: 20px;
+}
+
+legend {
+    margin: 0 1em;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 0 5px;
+}
+
+fieldset {
+    border-radius: 7px;
+    padding-right: 3em;
+    border: 2px solid black;
+}
+
+.personal-info input {
+    border-radius: 5px;
+    height: 2.5em;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.resume input {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 0.7em;
+    border-radius: 5px;
+}
+
+.submit {
+    background-color: rgb(33, 169, 33);
+    color: white;
+    align-self: left;
+    width: 7em;
+    margin: 0 20px 20px 20px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.job-details input {
+}
