@@ -14,11 +14,11 @@
                 <legend>Personal Information</legend>
                 <form action="">
                     <label for="name">Name: </label>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" required>
                     <label for="email">Email: </label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required>
                     <label for="phno">Phone: </label>
-                    <input type="tel" name="phno" id="phno">
+                    <input type="tel" name="phno" id="phno" required>
                 </form>
             </fieldset>
         </section>
@@ -29,20 +29,20 @@
                 <form action="">
                     <label for="">Position Applying for: </label>
                     <label for="developer">Developer </label>
-                    <input type="radio" id="developer" name="position">
+                    <input type="radio" id="developer" name="position" required>
                     <label for="designer">Designer </label>
-                    <input type="radio" id="designer" name="position">
+                    <input type="radio" id="designer" name="position" required>
                     <label for="manager">Manager </label>
-                    <input type="radio" id="manager" name="position">
+                    <input type="radio" id="manager" name="position" required>
                     <label for="">Skills: </label>
                     <label for="html">HTML </label>
-                    <input type="radio" id="html">
+                    <input type="checkbox" id="html">
                     <label for="css">CSS </label>
-                    <input type="radio" id="css">
+                    <input type="checkbox" id="css">
                     <label for="js">Javascript </label>
-                    <input type="radio" id="js">
+                    <input type="checkbox" id="js">
                     <label for="react">React </label>
-                    <input type="radio" id="react">
+                    <input type="checkbox" id="react">
                 </form>
             </fieldset>
         </section>
@@ -52,12 +52,12 @@
                 <legend>Resume</legend>
                 <form action="">
                     <label for="resume-upload">Upload your resume (PDF or DOCX only):</label>
-                    <input type="file" id="resume-upload" accept=".pdf, .docx">
+                    <input type="file" id="resume-upload" accept=".pdf, .docx" required>
                 </form>
             </fieldset>
         </section>
 
-        <button class="submit">Submit</button>
+        <button class="submit" id="submitButton" disabled>Submit</button>
     </main>
 </body>
 </html>

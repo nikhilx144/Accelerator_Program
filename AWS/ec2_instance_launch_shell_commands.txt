@@ -1,0 +1,148 @@
+
+C:\Users\nikhi\Documents\Accelerator_Program\5-Day_Practical_Bootcamp\Day1_Tasks>scp -i "C:\Users\nikhi\Desktop\test-ec2.pem" -r ".\Company_About_Page\*" ec2-user@98.130.84.91:/tmp/company_page
+The authenticity of host '98.130.84.91 (98.130.84.91)' can't be established.
+ED25519 key fingerprint is SHA256:cz5+RFJ34tRQ1Vhoe6FWiU+APXew+dhip9QlJJpB1BE.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Warning: Permanently added '98.130.84.91' (ED25519) to the list of known hosts.
+Chaithanya.png                                                                                                            100%  428KB   8.4MB/s   00:00
+Krishna.jpg                                                                                                               100%  165KB  12.4MB/s   00:00
+Mithra.png                                                                                                                100%  517KB  15.3MB/s   00:00
+Nikhil.png                                                                                                                100%  235KB  12.1MB/s   00:00
+index.html                                                                                                                100% 2658   648.9KB/s   00:00
+styles.css                                                                                                                100% 1846   300.5KB/s   00:00
+
+C:\Users\nikhi\Documents\Accelerator_Program\5-Day_Practical_Bootcamp\Day1_Tasks>ssh -i "C:\Users\nikhi\Desktop\test-ec2.pem" ec2-user@98.130.84.91
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+[ec2-user@ip-172-31-10-156 ~]$ sudo yum install httpd -y
+Amazon Linux 2023 Kernel Livepatch repository                                                                               218 kB/s |  23 kB     00:00
+Dependencies resolved.
+============================================================================================================================================================
+ Package                                  Architecture                Version                                        Repository                        Size
+============================================================================================================================================================
+Installing:
+ httpd                                    x86_64                      2.4.65-1.amzn2023.0.1                          amazonlinux                       47 k
+Installing dependencies:
+ apr                                      x86_64                      1.7.5-1.amzn2023.0.4                           amazonlinux                      129 k
+ apr-util                                 x86_64                      1.6.3-1.amzn2023.0.1                           amazonlinux                       98 k
+ generic-logos-httpd                      noarch                      18.0.0-12.amzn2023.0.3                         amazonlinux                       19 k
+ httpd-core                               x86_64                      2.4.65-1.amzn2023.0.1                          amazonlinux                      1.4 M
+ httpd-filesystem                         noarch                      2.4.65-1.amzn2023.0.1                          amazonlinux                       13 k
+ httpd-tools                              x86_64                      2.4.65-1.amzn2023.0.1                          amazonlinux                       81 k
+ libbrotli                                x86_64                      1.0.9-4.amzn2023.0.2                           amazonlinux                      315 k
+ mailcap                                  noarch                      2.1.49-3.amzn2023.0.3                          amazonlinux                       33 k
+Installing weak dependencies:
+ apr-util-openssl                         x86_64                      1.6.3-1.amzn2023.0.1                           amazonlinux                       17 k
+ mod_http2                                x86_64                      2.0.27-1.amzn2023.0.3                          amazonlinux                      166 k
+ mod_lua                                  x86_64                      2.4.65-1.amzn2023.0.1                          amazonlinux                       60 k
+
+Transaction Summary
+============================================================================================================================================================
+Install  12 Packages
+
+Total download size: 2.3 M
+Installed size: 6.9 M
+Downloading Packages:
+(1/12): apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64.rpm                                                                    454 kB/s |  17 kB     00:00
+(2/12): apr-1.7.5-1.amzn2023.0.4.x86_64.rpm                                                                                 2.9 MB/s | 129 kB     00:00
+(3/12): apr-util-1.6.3-1.amzn2023.0.1.x86_64.rpm                                                                            2.0 MB/s |  98 kB     00:00
+(4/12): generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch.rpm                                                               893 kB/s |  19 kB     00:00
+(5/12): httpd-2.4.65-1.amzn2023.0.1.x86_64.rpm                                                                              2.2 MB/s |  47 kB     00:00
+(6/12): httpd-core-2.4.65-1.amzn2023.0.1.x86_64.rpm                                                                          42 MB/s | 1.4 MB     00:00
+(7/12): httpd-filesystem-2.4.65-1.amzn2023.0.1.noarch.rpm                                                                   509 kB/s |  13 kB     00:00
+(8/12): httpd-tools-2.4.65-1.amzn2023.0.1.x86_64.rpm                                                                        2.7 MB/s |  81 kB     00:00
+(9/12): libbrotli-1.0.9-4.amzn2023.0.2.x86_64.rpm                                                                            14 MB/s | 315 kB     00:00
+(10/12): mailcap-2.1.49-3.amzn2023.0.3.noarch.rpm                                                                           1.5 MB/s |  33 kB     00:00
+(11/12): mod_http2-2.0.27-1.amzn2023.0.3.x86_64.rpm                                                                         6.0 MB/s | 166 kB     00:00
+(12/12): mod_lua-2.4.65-1.amzn2023.0.1.x86_64.rpm                                                                           2.7 MB/s |  60 kB     00:00
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                        15 MB/s | 2.3 MB     00:00
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                    1/1
+  Installing       : apr-1.7.5-1.amzn2023.0.4.x86_64                                                                                                   1/12
+  Installing       : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64                                                                                      2/12
+  Installing       : apr-util-1.6.3-1.amzn2023.0.1.x86_64                                                                                              3/12
+  Installing       : mailcap-2.1.49-3.amzn2023.0.3.noarch                                                                                              4/12
+  Installing       : httpd-tools-2.4.65-1.amzn2023.0.1.x86_64                                                                                          5/12
+  Installing       : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                             6/12
+  Running scriptlet: httpd-filesystem-2.4.65-1.amzn2023.0.1.noarch                                                                                     7/12
+  Installing       : httpd-filesystem-2.4.65-1.amzn2023.0.1.noarch                                                                                     7/12
+  Installing       : httpd-core-2.4.65-1.amzn2023.0.1.x86_64                                                                                           8/12
+  Installing       : mod_http2-2.0.27-1.amzn2023.0.3.x86_64                                                                                            9/12
+  Installing       : mod_lua-2.4.65-1.amzn2023.0.1.x86_64                                                                                             10/12
+  Installing       : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                                11/12
+  Installing       : httpd-2.4.65-1.amzn2023.0.1.x86_64                                                                                               12/12
+  Running scriptlet: httpd-2.4.65-1.amzn2023.0.1.x86_64                                                                                               12/12
+  Verifying        : apr-1.7.5-1.amzn2023.0.4.x86_64                                                                                                   1/12
+  Verifying        : apr-util-1.6.3-1.amzn2023.0.1.x86_64                                                                                              2/12
+  Verifying        : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64                                                                                      3/12
+  Verifying        : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                                 4/12
+  Verifying        : httpd-2.4.65-1.amzn2023.0.1.x86_64                                                                                                5/12
+  Verifying        : httpd-core-2.4.65-1.amzn2023.0.1.x86_64                                                                                           6/12
+  Verifying        : httpd-filesystem-2.4.65-1.amzn2023.0.1.noarch                                                                                     7/12
+  Verifying        : httpd-tools-2.4.65-1.amzn2023.0.1.x86_64                                                                                          8/12
+  Verifying        : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                             9/12
+  Verifying        : mailcap-2.1.49-3.amzn2023.0.3.noarch                                                                                             10/12
+  Verifying        : mod_http2-2.0.27-1.amzn2023.0.3.x86_64                                                                                           11/12
+  Verifying        : mod_lua-2.4.65-1.amzn2023.0.1.x86_64                                                                                             12/12
+
+Installed:
+  apr-1.7.5-1.amzn2023.0.4.x86_64                         apr-util-1.6.3-1.amzn2023.0.1.x86_64           apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64
+  generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch       httpd-2.4.65-1.amzn2023.0.1.x86_64             httpd-core-2.4.65-1.amzn2023.0.1.x86_64
+  httpd-filesystem-2.4.65-1.amzn2023.0.1.noarch           httpd-tools-2.4.65-1.amzn2023.0.1.x86_64       libbrotli-1.0.9-4.amzn2023.0.2.x86_64
+  mailcap-2.1.49-3.amzn2023.0.3.noarch                    mod_http2-2.0.27-1.amzn2023.0.3.x86_64         mod_lua-2.4.65-1.amzn2023.0.1.x86_64
+
+Complete!
+[ec2-user@ip-172-31-10-156 ~]$ sudo status httpd
+sudo: status: command not found
+[ec2-user@ip-172-31-10-156 ~]$ sudo yum status httpd
+No such command: status. Please use /usr/bin/yum --help
+It could be a YUM plugin command, try: "yum install 'dnf-command(status)'"
+[ec2-user@ip-172-31-10-156 ~]$ sudo systemctl status httpd
+○ httpd.service - The Apache HTTP Server
+     Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; preset: disabled)
+     Active: inactive (dead)
+       Docs: man:httpd.service(8)
+[ec2-user@ip-172-31-10-156 ~]$ sudo systemctl enable httpd
+Created symlink /etc/systemd/system/multi-user.target.wants/httpd.service → /usr/lib/systemd/system/httpd.service.
+[ec2-user@ip-172-31-10-156 ~]$ sudo systemctl start httpd
+[ec2-user@ip-172-31-10-156 ~]$ sudo systemctl status httpd
+● httpd.service - The Apache HTTP Server
+     Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; preset: disabled)
+     Active: active (running) since Thu 2025-09-25 07:35:44 UTC; 2s ago
+       Docs: man:httpd.service(8)
+   Main PID: 26036 (httpd)
+     Status: "Started, listening on: port 80"
+      Tasks: 177 (limit: 1057)
+     Memory: 13.4M
+        CPU: 60ms
+     CGroup: /system.slice/httpd.service
+             ├─26036 /usr/sbin/httpd -DFOREGROUND
+             ├─26037 /usr/sbin/httpd -DFOREGROUND
+             ├─26038 /usr/sbin/httpd -DFOREGROUND
+             ├─26039 /usr/sbin/httpd -DFOREGROUND
+             └─26083 /usr/sbin/httpd -DFOREGROUND
+
+Sep 25 07:35:44 ip-172-31-10-156.ap-south-2.compute.internal systemd[1]: Starting httpd.service - The Apache HTTP Server...
+Sep 25 07:35:44 ip-172-31-10-156.ap-south-2.compute.internal systemd[1]: Started httpd.service - The Apache HTTP Server.
+Sep 25 07:35:44 ip-172-31-10-156.ap-south-2.compute.internal httpd[26036]: Server configured, listening on: port 80
+[ec2-user@ip-172-31-10-156 ~]$ sudo mkdir -p /var/www/html
+[ec2-user@ip-172-31-10-156 ~]$ sudo cp -r /tmp/company_page/* /var/www/html/
+[ec2-user@ip-172-31-10-156 ~]$ sudo chmod -R 755 /var/www/html/
+[ec2-user@ip-172-31-10-156 ~]$ Connection to 98.130.84.91 closed by remote host.
+Connection to 98.130.84.91 closed.
+
+C:\Users\nikhi\Documents\Accelerator_Program\5-Day_Practical_Bootcamp\Day1_Tasks>
