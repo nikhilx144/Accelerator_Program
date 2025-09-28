@@ -8,39 +8,71 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>RSVP - Annual Gala</h1>
-    </header>
     <main>
         <section class="form-section">
-            <form action="">
-                <label for="party-size">Party size (Max 9 per RSVP): </label>
-                <input type="text" id="party-size">
-                <label for="meal-preference">Meal Preference: </label>
-                <select name="meal-preference" id="meal-preference">
-                    <option value="veg">Veg</option>
-                    <option value="non-veg">Non-Veg</option>
-                    <option value="vegan">Vegan</option>
-                </select>
-                <label for="">Seating zone: </label>
-                <select name="seating-zone" id="seating-zone">
-                    <optgroup label="Front">
-                    <option value="front-1">Front 1</option>
-                    <option value="front-2">Front 2</option>
-
-                    <optgroup label="Middle">
-                    <option value="middle-1">Middle 1</option>
-                    <option value="middle-2">Middle 2</option>
-                    <option value="middle-3">Middle 3</option>
+            <div class="form-container">
+                <form action="">
+                    <h1>RSVP - Annual Gala</h1>
+                    <label for="party-size">Party size (Max 9 per RSVP): </label>
+                    <input type="number" id="party-size" min="1" max="9" required>
+    
+                    <label for="meal-preference">Meal Preference: </label>
+                    <select name="meal-preference" id="meal-preference" required>
+                        <option value="veg">Veg</option>
+                        <option value="non-veg">Non-Veg</option>
+                        <option value="vegan">Vegan</option>
+                    </select>
                     
-                    <optgroup label="Back">
-                    <option value="back-1">Back 1</option>
-                    <option value="back-2">Back 2</option>
-                </select>
+                    <label for="">Seating zone: </label>
+                    <select name="seating-zone" id="seating-zone" required>
+                        <optgroup label="Front">
+                            <option value="front-1">Front 1</option>
+                            <option value="front-2">Front 2</option>
+                        </optgroup>
 
-                <label for="special-needs">Special needs (optional): </label>
-                <input type="textbox" name="special-needs" id="special-needs" placeholder="Any special needs?">
-            </form>
+                        <optgroup label="Middle">
+                            <option value="middle-1">Middle 1</option>
+                            <option value="middle-2">Middle 2</option>
+                            <option value="middle-3">Middle 3</option>
+                        </optgroup>
+
+                        <optgroup label="Back">
+                            <option value="back-1">Back 1</option>
+                            <option value="back-2">Back 2</option>
+                        </optgroup>
+                    </select>
+    
+                    <label for="special-needs">Special needs (optional): </label>
+                    <textarea name="special-needs" id="special-needs"></textarea>
+    
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" required>
+    
+                    <label for="phno">Phone Number: </label>
+                    <input type="tel" name="phno" id="phno" pattern="[0-9]{10}">
+    
+                    <label for="confirm-attendance">Confirm Attendance: </label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="confirm-attendance" id="yes" value="yes" required>
+                        </div>
+                        <div class="radio-option">
+                            <label for="no">No</label>
+                            <input type="radio" name="confirm-attendance" id="no" value="no" required>
+                        </div>
+                    </div>
+    
+                    <div class="map" aria-hidden="true">
+                        <!-- <p>Map Placeholder</p> -->
+                    </div>
+    
+                    <div class="buttons">
+                        <button class="save-rsvp" type="submit">Save RSVP</button>
+                        <button class="clear" type="reset">Clear</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 </body>
