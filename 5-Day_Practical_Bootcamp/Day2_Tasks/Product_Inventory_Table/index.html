@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Inventory Table</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <form action="">
+        <div class="form-elements">
+          <div class="search-box">
+            <label for="search">Search: </label>
+            <input type="search" placeholder="Product name" />
+          </div>
+
+          <div class="category-selection">
+            <label for="category-dropdown">Category: </label>
+            <select name="category-dropdown" id="category-dropdown">
+              <option value="">All</option>
+              <option value="electronics">Electronics</option>
+              <option value="home">Home</option>
+              <option value="office">Office</option>
+            </select>
+          </div>
+
+          <div class="status-selection">
+            <label for="status-dropdown">Status: </label>
+            <select name="status-dropdown" id="status-dropdown">
+              <option value="">All</option>
+              <option value="in-stock">In Stock</option>
+              <option value="low-stock">Low Stock</option>
+              <option value="out-of-stock">Out of Stock</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </header>
+
+    <section class="hero">
+      <table border="1" cellspacing="0">
+        <caption>
+          Inventory - September
+        </caption>
+        <thead>
+          <tr>
+            <th>SKU</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="SKU">12345</td>
+            <td data-label="Name"><a href="#">Smartphone</a></td>
+            <td data-label="Category">Electronics</td>
+            <td data-label="Qty" class="right-align">150</td>
+            <td data-label="Price" class="right-align price">$599.99</td>
+            <td data-label="Status">In Stock</td>
+          </tr>
+          <tr>
+            <td data-label="SKU">23456</td>
+            <td data-label="Name"><a href="#">Laptop</a></td>
+            <td data-label="Category">Electronics</td>
+            <td data-label="Qty" class="right-align">50</td>
+            <td data-label="Price" class="right-align price">$999.99</td>
+            <td data-label="Status">Out of Stock</td>
+          </tr>
+          <tr>
+            <td data-label="SKU">34567</td>
+            <td data-label="Name"><a href="#">Sofa</a></td>
+            <td data-label="Category">Furniture</td>
+            <td data-label="Qty" class="right-align">20</td>
+            <td data-label="Price" class="right-align price">$349.99</td>
+            <td data-label="Status">In Stock</td>
+          </tr>
+          <tr>
+            <td data-label="SKU">45678</td>
+            <td data-label="Name"><a href="#">Jacket</a></td>
+            <td data-label="Category">Clothing</td>
+            <td data-label="Qty" class="right-align">120</td>
+            <td data-label="Price" class="right-align price">$79.99</td>
+            <td data-label="Status">In Stock</td>
+          </tr>
+          <tr>
+            <td data-label="SKU">56789</td>
+            <td data-label="Name"><a href="#">Smartwatch</a></td>
+            <td data-label="Category">Electronics</td>
+            <td data-label="Qty" class="right-align">75</td>
+            <td data-label="Price" class="right-align price">$199.99</td>
+            <td data-label="Status">Out of Stock</td>
+          </tr>
+          <tr>
+            <td data-label="SKU">67890</td>
+            <td data-label="Name"><a href="#">Dining Table</a></td>
+            <td data-label="Category">Furniture</td>
+            <td data-label="Qty" class="right-align">10</td>
+            <td data-label="Price" class="right-align price">$499.99</td>
+            <td data-label="Status">In Stock</td>
+          </tr>
+          <tr>
+            <td data-label="SKU">78901</td>
+            <td data-label="Name"><a href="#">T-shirt</a></td>
+            <td data-label="Category">Clothing</td>
+            <td data-label="Qty" class="right-align">200</td>
+            <td data-label="Price" class="right-align price">$19.99</td>
+            <td data-label="Status">In Stock</td>
+          </tr>
+          <tr>
+            <td data-label="SKU">89012</td>
+            <td data-label="Name"><a href="#">Washing Machine</a></td>
+            <td data-label="Category">Electronics</td>
+            <td data-label="Qty" class="right-align">35</td>
+            <td data-label="Price" class="right-align price">$699.99</td>
+            <td data-label="Status">Out of Stock</td>
+          </tr>
+          <tr>
+            <td data-label="SKU">90123</td>
+            <td data-label="Name"><a href="#">Bookshelf</a></td>
+            <td data-label="Category">Furniture</td>
+            <td data-label="Qty" class="right-align">45</td>
+            <td data-label="Price" class="right-align price">$149.99</td>
+            <td data-label="Status">In Stock</td>
+          </tr>
+          <tr>
+            <td data-label="SKU">11234</td>
+            <td data-label="Name"><a href="#">Sweater</a></td>
+            <td data-label="Category">Clothing</td>
+            <td data-label="Qty" class="right-align">85</td>
+            <td data-label="Price" class="right-align price">$39.99</td>
+            <td data-label="Status">In Stock</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>
