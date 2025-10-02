@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+    display: flex;
+    gap: 20px;
+    margin: 30px;
+}
+
+.form-section, .map-section {
+    /* border: 2px solid black; */
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    flex: 4;
+    padding: 30px;
+}
+
+.map-section {
+    max-height: 350px;
+    flex: 3;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, select, textarea {
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 10px;
+}
+
+form input[type='checkbox'] {
+    height: min-content;
+}
+
+form textarea {
+    min-height: 60px;
+    padding-top: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form small {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+form select {
+    padding-left: 10px;
+}
+
+.submit-button {
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(0, 104, 50);
+    color: white;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: rgb(1, 71, 35);
+}
+
+.map-placeholder {
+    background-color: lightgray;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notice {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.notice--success {
+    background-color: #e6f9ec;
+    color: #065f46;
+    border: 1px solid #34d399;
+}
+
+@media all and (max-width: 768px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media print {
+    .map-section {
+        display: none;
+    }
+}
