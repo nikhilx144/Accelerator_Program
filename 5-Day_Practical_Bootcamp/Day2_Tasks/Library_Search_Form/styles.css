@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header h1 {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset legend {
+    font-weight: bolder;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.form-section {
+    margin: 50px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.321);
+    height: auto;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 16px;
+    width: 800px;
+}
+
+.form-row-1 {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.search-pair, .media-type-pair, .year-range-pair {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row-1 input, select {
+    min-width: 200px;
+    width: auto;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.number-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.number-inputs input {
+    width: auto;
+    min-width: 100px;
+    padding-left: 8px;
+}
+
+input, select {
+    margin: 10px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+small {
+    font-size: 12px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-self: right;
+}
+
+button {
+    padding: 10px;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    min-width: 80px;
+}
+
+.clear-button {
+    background-color: gray;
+}
+
+.search-button {
+    background-color: rgb(40, 141, 242);
+}
+
+abbr {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.advanced-tips {
+    background-color: white;
+    width: auto;
+    min-width: min-content;
+}
+
+@media all and (max-width: 992px) {
+    .form-row-1 {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+}

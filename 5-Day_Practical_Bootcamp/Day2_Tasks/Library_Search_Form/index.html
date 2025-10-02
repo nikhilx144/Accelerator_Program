@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Search Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Search Filters</h1>
+    </header>
+    <main class="hero">
+        <div class="form-section">
+            <fieldset>
+                <legend>Search Filters</legend>
+                <form action="">
+                    <div class="form-row-1">
+                        <div class="search-pair">
+                            <label for="search">Search</label>
+                            <input type="search" name="search" required>
+                        </div>
+            
+                        <div class="media-type-pair">
+                            <label for="media-type">Media Type</label>
+                            <select name="media-type" id="media-type" required>
+                                <option value="book">Book</option>
+                                <option value="journal">Journal</option>
+                                <option value="ebook">eBook</option>
+                            </select>
+                        </div>
+            
+                        <div class="year-range-pair">
+                            <label for="">Year Range</label>
+                            <div class="number-inputs">
+                                <input type="number" name="year-range" min="1900" max="2100" placeholder="From" aria-describedby="year-help" required>
+                                <input type="number" name="year-range" min="1900" max="2100" placeholder="To" aria-describedby="year-help" required>
+                            </div>
+                            <small id="year-help" class="helper-text">Enter years between 1900 and 2100.</small>
+                        </div>
+                    </div>
+        
+                    <input type="checkbox" name="availability" id="availability" required>
+                    <label for="availability">Available Now</label>
+        
+                    <div class="buttons">
+                        <button type="reset" class="clear-button">Clear</button>
+                        <button type="submit" class="search-button">Search</button>
+                        <button type="button" aria-label="Advanced Tips" class="advanced-tips">🔍</button>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </main>
+</body>
+</html>
