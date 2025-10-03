@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Pricing Page with Theme Toggle (No JS)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="light-theme">
+    <header>
+        <h1>SaaS Pricing</h1>
+        <div class="dark-theme-control">
+            <input type="checkbox" name="dark-theme-checkbox" id="dark-theme-checkbox">
+            <label for="dark-theme-checkbox">Dark Theme</label>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="plan-cards">
+                <div class="plan-card">
+                    <h3 class="plan-type">Basic</h3>
+                    <h2 class="plan-price">$10 <span class="visually-hidden">per month</span></h2>
+                    <ul class="feature-list">
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                        <li>Feature 4</li>
+                        <li>Feature 5</li>
+                        <li>Feature 6</li>
+                    </ul>
+                    <button class="choose-plan-button">Choose Plan</button>
+                </div>
+                <div class="plan-card pro" id="recommended-plan">
+                    <h3 class="plan-type">Pro</h3>
+                    <h2 class="plan-price">$30 <span class="visually-hidden">per month</span></h2>
+                    <ul class="feature-list">
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                        <li>Feature 4</li>
+                        <li>Feature 5</li>
+                        <li>Feature 6</li>
+                    </ul>
+                    <button class="choose-plan-button">Choose Plan</button>
+                </div>
+                <div class="plan-card">
+                    <h3 class="plan-type">Enterprise</h3>
+                    <h2 class="plan-price">$60 <span class="visually-hidden">per month</span></h2>
+                    <ul class="feature-list">
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                        <li>Feature 4</li>
+                        <li>Feature 5</li>
+                        <li>Feature 6</li>
+                    </ul>
+                    <button class="choose-plan-button">Choose Plan</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
