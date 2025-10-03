@@ -79,6 +79,7 @@ img {
     grid-area: s;
     border-radius: 10px;
     gap: 50px;
+    padding-bottom: 10px;
 }
 
 .first-secondary-story, .second-secondary-story{
