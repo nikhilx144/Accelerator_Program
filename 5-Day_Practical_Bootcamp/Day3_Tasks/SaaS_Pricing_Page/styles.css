@@ -57,6 +57,7 @@ header {
     border-radius: 10px;
     background-color: var(--card-bg);
     gap: 20px;
+    transition: 0.3s ease;
 }
 
 .plan-type {
@@ -90,7 +91,6 @@ header {
 
 .pro {
     position: relative;
-    transition: 0.3s ease;
 }
 
 .visually-hidden {
