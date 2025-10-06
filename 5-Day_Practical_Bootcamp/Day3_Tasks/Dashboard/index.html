@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h2>Company Dashboard</h2>
+        <ul class="dashboard-sections">
+            <li><button><a href="#" aria-current="page">Overview</a></button></li>
+            <li><button><a href="#">Orders</a></button></li>
+            <li><button><a href="#">Customers</a></button></li>
+            <li><button><a href="#">Reports</a></button></li>
+            <li><button><a href="#">Settings</a></button></li>
+        </ul>
+        <h4>Quick Filters</h4>
+        <ul class="horizontal-list">
+            <li>Today</li>
+            <li>7d</li>
+            <li>30d</li>
+        </ul>
+    </aside>
+
+    <main class="hero">
+        <section class="KPIs">
+            <div class="kpi">
+                <h4>Total Sales</h4>
+                <h2>$128,430</h2>
+                <p>+6.2% vs last week</p>
+            </div>
+            <div class="kpi">
+                <h4>Orders</h4>
+                <h2>2318</h2>
+                <p>Average order value $55.4</p>
+            </div>
+            <div class="kpi">
+                <h4>Users</h4>
+                <h2>12,740</h2>
+                <p>Active users (30d)</p>
+            </div>
+            <div class="kpi">
+                <h4>Conversion</h4>
+                <h2>3.1%</h2>
+                <p>Sessions → Orders</p>
+            </div>
+        </section>
+
+        <section class="content-area">
+            <div class="recent-orders">
+                <h3>Recent Orders</h3>
+                <p>Last 8 orders</p>
+                <table>
+                    <thead>
+                        <th>Order</th>
+                        <th>Customer</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td>#10024</td>
+                            <td>Jane D.</td>
+                            <td>$94.00</td>
+                            <td><span class="button-style-td-green">Paid</span></td>
+                            <td><time datetime="2025-10-05">Oct 5, 2025</time></td>
+                        </tr>
+                        <tr>
+                            <td>#10024</td>
+                            <td>Jane D.</td>
+                            <td>$94.00</td>
+                            <td><span class="button-style-td-yellow">Pending</span></td>
+                            <td><time datetime="2025-10-05">Oct 5, 2025</time></td>
+                        </tr>
+                        <tr>
+                            <td>#10024</td>
+                            <td>Jane D.</td>
+                            <td>$94.00</td>
+                            <td><span class="button-style-td-red">Cancelled</span></td>
+                            <td><time datetime="2025-10-05">Oct 5, 2025</time></td>
+                        </tr>
+                        <tr>
+                            <td>#10024</td>
+                            <td>Jane D.</td>
+                            <td>$94.00</td>
+                            <td><span class="button-style-td-green">Paid</span></td>
+                            <td><time datetime="2025-10-05">Oct 5, 2025</time></td>
+                        </tr>
+                        <tr>
+                            <td>#10024</td>
+                            <td>Jane D.</td>
+                            <td>$94.00</td>
+                            <td><span class="button-style-td-red">Cancelled</span></td>
+                            <td><time datetime="2025-10-05">Oct 5, 2025</time></td>
+                        </tr>
+                        <tr>
+                            <td>#10024</td>
+                            <td>Jane D.</td>
+                            <td>$94.00</td>
+                            <td><span class="button-style-td-green">Paid</span></td>
+                            <td><time datetime="2025-10-05">Oct 5, 2025</time></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="traffic-by-channel">
+                <h3>Traffic by Channel</h3>
+                <div class="progress-bar">
+                    <div class="bar-text">
+                        <label for="organic-search">Organic Search</label>
+                        <small>45%</small>
+                    </div>
+                    <div class="bar">
+                        <div class="fill" style="width: 45%;"></div>
+                    </div>
+                    <!-- <progress id="organic-search" value="45" max="100">45%</progress> -->
+                </div>
+                
+                <div class="progress-bar">
+                    <div class="bar-text">
+                        <label for="direct">Direct</label>
+                        <small>25%</small>
+                    </div>
+                    <div class="bar">
+                        <div class="fill" style="width: 25%;"></div>
+                    </div>
+                    <!-- <progress id="direct" value="25" max="100">25%</progress> -->
+                </div>
+                
+                <div class="progress-bar">
+                    <div class="bar-text">
+                        <label for="referal">Referal</label>
+                        <small>15%</small>
+                    </div>
+                    <div class="bar">
+                        <div class="fill" style="width: 15%;"></div>
+                    </div>
+                    <!-- <progress id="referal" value="15" max="100">15%</progress> -->
+                </div>
+                
+                <div class="progress-bar">
+                    <div class="bar-text">
+                        <label for="paid">Paid</label>
+                        <small>10%</small>
+                    </div>
+                    <div class="bar">
+                        <div class="fill" style="width: 10%;"></div>
+                    </div>
+                    <!-- <progress id="paid" value="10" max="100">10%</progress> -->
+                </div>
+                
+                <div class="progress-bar">
+                    <div class="bar-text">
+                        <label for="social">Social</label>
+                        <small>5%</small>
+                    </div>
+                    <div class="bar">
+                        <div class="fill" style="width: 5%;"></div>
+                    </div>
+                    <!-- <progress id="social" value="5" max="100">5%</progress> -->
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
