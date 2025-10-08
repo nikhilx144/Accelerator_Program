@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #e5e3e3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+    height: auto;
+    min-height: 5rem;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-header-text p {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.logo-header-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.85rem;
+    gap: 2px;
+}
+
+.logo {
+    background-color: rgb(255, 106, 0);
+    color: #fff;
+    /* background: linear-gradient(to right, white 0%, orange 100%); */
+    border-radius: 10px;
+    padding: 7px 5px;
+}
+
+.filter-content {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.control-element select {
+    border-radius: 5px;
+    padding: 5px 2px;
+    font-weight: bolder;
+}
+
+.control-element label {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.recipe-cards-grid {
+    /* border: 2px solid black; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.recipe-card img {
+    object-fit: fill;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.recipe-card {
+    background-color: #fff;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+}
+
+.chips {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.chip-text{
+    background-color: rgba(255, 166, 0, 0.3);
+    color: orange;
+    padding: 3px 7px;
+    border-radius: 10px;
+}
+
+
+.card-text-content {
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.recipe-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recipe-desc p {
+    font-size: 0.9rem;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.7);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.85rem;
+}
+
+@media print {
+    .recipe-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-desc p {
+        display: block;
+        -webkit-line-clamp: unset;
+        line-clamp: unset;
+        overflow: visible;
+        max-height: none;
+    }
+
+    header, footer {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    .chip-text {
+        color: black;
+        background: none;
+    }
+}
+
+@page {
+    margin: 12mm;
+}
